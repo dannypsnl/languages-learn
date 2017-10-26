@@ -1,0 +1,6 @@
+elm-stuff/
+
+**/*/*.o
+**/*/*.c
+**/*/nimcache
+
