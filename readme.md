@@ -1,5 +1,6 @@
 # languages-learn
 This repo exist is because I learn many languages, and I need a note for them.
+[GitBook](https://www.gitbook.com/book/dannypsnl/languages-learn/details)
 ## nim
 [Install Nim](https://nim-lang.org/install.html)
 - A brainfuck interpreter
