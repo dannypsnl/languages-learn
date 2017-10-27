@@ -1,14 +1,8 @@
-/*for elm*/
 elm-stuff/
 
-/*for nim
-* c++
-* Haskell
-*/
 **/*/*.o
 **/*/*.c
 **/*/*.hi
 **/*/nimcache
 
-/*for java*/
 **/*/*.class
