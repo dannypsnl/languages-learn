@@ -1,6 +1,9 @@
+module Main where
+x::Int
+x = 2
 z::Int
-z = 1
+z = x + 1
 
-main :: IO()
+main::IO()
 main = do
   print z
