@@ -7,7 +7,11 @@ const sleep = (param) => {
 }
 
 async function print() {
-    var res = await sleep(2)
+    let res = await sleep(2)
+    console.log(res)
+    res = await sleep(res)
+    console.log(res)
+    res = await sleep(res)
     console.log(res)
 }
 
