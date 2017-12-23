@@ -1,3 +1,4 @@
+// Compile: clang++ main.cc
 #include <iostream>
 
 template <int x, int y> class Matrix {
@@ -12,5 +13,6 @@ template <int x, int y> Matrix<x, y> Add(Matrix<x, y> a, Matrix<x, y> b) {
 
 int main() {
   std::cout << Add(Matrix<2, 2>(), Matrix<2, 2>()).print() << std::endl;
+  // This line never pass, interesting part.
   std::cout << Add(Matrix<3, 2>(), Matrix<2, 3>()).print() << std::endl;
 }
