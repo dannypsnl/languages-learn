@@ -3,8 +3,6 @@
 
 template <int x, int y> class Matrix {
   // We don't care how to implement at here
-public:
-  std::string print() { return std::string("Matrix"); }
 };
 
 template <int x, int y> Matrix<x, y> Add(Matrix<x, y> a, Matrix<x, y> b) {
@@ -12,7 +10,8 @@ template <int x, int y> Matrix<x, y> Add(Matrix<x, y> a, Matrix<x, y> b) {
 }
 
 int main() {
-  std::cout << Add(Matrix<2, 2>(), Matrix<2, 2>()).print() << std::endl;
+  std::cout << "Matrix" << std::endl;
+  Add(Matrix<2, 2>(), Matrix<2, 2>());
   // This line never pass, interesting part.
-  std::cout << Add(Matrix<3, 2>(), Matrix<2, 3>()).print() << std::endl;
+  Add(Matrix<3, 2>(), Matrix<2, 3>());
 }
