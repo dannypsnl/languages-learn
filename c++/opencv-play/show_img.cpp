@@ -13,6 +13,8 @@ int main(int argc, char **argv) {
   }
   // Create a window
   cv::namedWindow("Show Image", cv::WINDOW_AUTOSIZE);
+  // Show image on window, detected by ref name
+  cv::imshow("Show Image", img);
   // Wait a keyboard's input
   cv::waitKey(0);
   // Destroy the window by ref name
