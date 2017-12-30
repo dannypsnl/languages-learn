@@ -3,6 +3,7 @@ This part puts some openCV examples.<br>
 ## OpenCV Install
 ```bash
 $ git clone https://github.com/opencv/opencv.git
+$ cd opencv
 $ mkdir release && cd release
 $ cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
 $ make
