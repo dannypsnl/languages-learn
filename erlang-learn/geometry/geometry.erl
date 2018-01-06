@@ -2,6 +2,7 @@
 -export([test/0, area/1]).
 
 area({rectangle, Width, Height}) -> Width * Height;
+area({circle, Radius})           -> Radius * Radius * 3.1415926;
 area({square, Side})             -> Side * Side.
 
 test() -> 
