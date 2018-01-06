@@ -8,6 +8,8 @@
 225
 3> geometry:area({rectangle, 20, 15}).
 300
+4> geometry:area({circle, 1}).
+3.1415926
 ```
 ### Test
 ```erlang
