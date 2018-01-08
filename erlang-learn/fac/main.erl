@@ -6,6 +6,6 @@
 main([A]) ->
     I = list_to_integer(A),
     F = fac:fac(I),
-    io:format("factorial ~w = ~w~n", [I, F]),
+    io:format("~w! = ~w~n", [I, F]),
     init:stop().
 
