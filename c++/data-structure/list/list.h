@@ -3,9 +3,11 @@
 
 template <class T> class Node {
   T value;
+  // next_node default is nullptr
   Node *next_node = nullptr;
 
 public:
+  // Just because compiler won't create one for you
   Node();
   Node(T);
   void next(Node<T> *);
@@ -24,7 +26,7 @@ template <class T> T Node<T>::get_value() { return value; }
 template <class T> Node<T> *Node<T>::get_next() { return next_node; }
 
 template <class T> class List {
-  Node<T> *first = new Node<T>();
+  Node<T> *first;
 
 public:
   List(std::initializer_list<T>);
@@ -32,9 +34,10 @@ public:
 };
 
 template <class T> List<T>::List(std::initializer_list<T> l) {
-  first = new Node<T>(*l.begin());
+  auto iter = l.begin();
+  first = new Node<T>(*iter);
   auto now = first;
-  for (auto iter = l.begin(); iter != l.end(); ++iter) {
+  for (iter = ++iter; iter != l.end(); ++iter) {
     now->next(new Node<T>(*iter));
     now = now->get_next();
   }
