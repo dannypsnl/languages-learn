@@ -1,0 +1,11 @@
+cc = erlc
+
+rule compile
+    command = $cc $in
+
+rule run
+    command = $runner $in
+
+build main.beam: compile main.erl
+build fac.beam: compile fac.erl
+
