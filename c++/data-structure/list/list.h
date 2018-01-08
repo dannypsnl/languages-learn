@@ -1,6 +1,9 @@
 #include <initializer_list>
 #include <iostream>
 
+namespace collec {
+
+namespace {
 template <class T> class Node {
   T value;
   // next_node default is nullptr
@@ -24,6 +27,7 @@ template <class T> void Node<T>::next(Node *n) { this->next_node = n; }
 template <class T> T Node<T>::get_value() { return value; }
 
 template <class T> Node<T> *Node<T>::get_next() { return next_node; }
+} // namespace
 
 template <class T> class List {
   Node<T> *first;
@@ -48,3 +52,5 @@ template <class T> void List<T>::for_each() {
     std::cout << now->get_value() << std::endl;
   }
 }
+
+} // namespace collec
