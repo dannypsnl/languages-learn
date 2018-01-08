@@ -1,0 +1,16 @@
+cc = clang++
+cflags = -std=c++14 -Wall
+
+dest = dest
+
+rule cc
+    command = $cc $cflags -c $in -o $out
+
+rule link
+    command = $cc $in -o $out
+
+build $dest/macro.o: cc macro.cc
+build $dest/macro: link $dest/macro.o
+
+build $dest/spec_macro.o: cc spec_macro.cc
+build $dest/spec_macro: link $dest/spec_macro.o
