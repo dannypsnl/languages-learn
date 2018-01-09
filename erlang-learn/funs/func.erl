@@ -12,4 +12,7 @@ test() ->
     {f, 212.0} = TempConvert({c, 100}),
     {f, 32.0} = TempConvert({c, 0}),
     {c, 100.0} = TempConvert({f, 212}),
+    Even = fun(X) -> (X rem 2) =:= 0 end,
+    [false, true, false, true, false] = lists:map(Even, [1, 2, 3, 4, 5]),
+    [2, 4] = lists:filter(Even, [1, 2, 3, 4, 5]),
     test_pass.
