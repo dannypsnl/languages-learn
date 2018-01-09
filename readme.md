@@ -21,9 +21,6 @@ Just this. So easy.
 ## JavaScript(node.js)
 ## nim
 [Install Nim](https://nim-lang.org/install.html)<br>
-- A brainfuck interpreter
-`cd nim-learn/brainfuck/ && nim -d:release c brainfuck.nim && ./brainfuck examples/mandelbrot.b`
-- basic code block
 ## elm
 [Install elm](https://guide.elm-lang.org/install.html)<br>
 `cd elm-learn`
