@@ -7,3 +7,6 @@ let obj = {
 };
 
 obj.dump();
+
+let copyDump = obj.dump;
+copyDump();
