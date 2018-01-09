@@ -19,6 +19,7 @@ Follow this page.
 `curl https://sh.rustup.rs -sSf | sh`<br>
 Just this. So easy.
 ## JavaScript(node.js)
+[Node.js](https://nodejs.org/en/)
 ## nim
 [Install Nim](https://nim-lang.org/install.html)<br>
 ## elm
