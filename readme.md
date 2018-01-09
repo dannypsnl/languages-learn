@@ -1,6 +1,5 @@
 # languages-learn
 This repo exist is because I learn many languages, and I need a note for them.
-[GitBook](https://www.gitbook.com/book/dannypsnl/languages-learn/details)
 # Install!!!
 ## Java
 [Install JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
