@@ -23,9 +23,5 @@ Just this. So easy.
 [Install Nim](https://nim-lang.org/install.html)<br>
 ## elm
 [Install elm](https://guide.elm-lang.org/install.html)<br>
-`cd elm-learn`
-Then use elm-reactor<br>
-`elm-reactor`
-Then you can see those files at localhost<br>
 ## julia
 ## Idris
