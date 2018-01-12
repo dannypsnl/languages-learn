@@ -17,6 +17,8 @@ Follow this page.
 ## Rust
 `curl https://sh.rustup.rs -sSf | sh`<br>
 Just this. So easy.
+## Erlang
+[download page](https://www.erlang.org/downloads)
 ## JavaScript(node.js)
 [Node.js](https://nodejs.org/en/)
 ## nim
