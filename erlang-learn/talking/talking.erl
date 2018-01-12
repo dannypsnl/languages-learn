@@ -7,7 +7,7 @@ createMan(Name) ->
 man(MyName) ->
     receive
         {From, {Name, Say}} ->
-            io:format("~p say: ~p~n", [Name, Say]),
-            From ! {self(), {MyName, "hello"}}
-    end,
-    man(MyName).
+            io:format("~ts say: ~ts~n", [Name, Say]),
+            From ! {self(), {MyName, "hello"}},
+            man(MyName)
+    end.
