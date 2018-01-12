@@ -29,3 +29,6 @@ end
 
 println(hypot(3, 4))
 # 5
+
+println(+(1, 2, 3) == (1 + 2 + 3))
+# operator is function
