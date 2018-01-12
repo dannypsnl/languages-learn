@@ -20,4 +20,5 @@ test() ->
     IsFruit = MakeTest(Fruit),
     true = IsFruit(pear),
     false = IsFruit(car),
+    [orange, apple] = lists:filter(IsFruit, [dog, orange, cat, apple, bear]),
     test_pass.
