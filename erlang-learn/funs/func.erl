@@ -15,4 +15,9 @@ test() ->
     Even = fun(X) -> (X rem 2) =:= 0 end,
     [false, true, false, true, false] = lists:map(Even, [1, 2, 3, 4, 5]),
     [2, 4] = lists:filter(Even, [1, 2, 3, 4, 5]),
+    Fruit = [apple, pear, orange],
+    MakeTest = fun(L) -> (fun(X) -> lists:member(X, L) end) end,
+    IsFruit = MakeTest(Fruit),
+    true = IsFruit(pear),
+    false = IsFruit(car),
     test_pass.
