@@ -4,7 +4,7 @@
 {ok,talking}
 2> Dan = talking:createMan("danny").
 <0.68.0>
-3> Ym = talking:createMan("ym").    
+3> Ym = talking:createMan("三重比爾蓋茲").
 <0.70.0>
-4> Ym ! {Dan, {"danny", "Hello, I am Danny"}}.
+4> Ym ! {Dan, {"danny", "Hello, I am dan"}}.
 ```
