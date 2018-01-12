@@ -1,0 +1,9 @@
+println(zero(Float32))
+# 0.0f0
+println(zero(Int32))
+# 0
+println(one(Int32))
+# 1
+println(one(BigFloat))
+# 1.000000000000000000000000000000000000000000000000000000000000000000000000000000
+
