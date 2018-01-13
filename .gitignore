@@ -1,7 +1,6 @@
 elm-stuff/
 
 **/*/*.o
-**/*/*.c
 **/*/*.hi
 **/*/nimcache
 

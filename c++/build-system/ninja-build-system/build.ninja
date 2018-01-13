@@ -1,0 +1,15 @@
+cc = clang++
+cflags = -Wall
+
+# rule
+rule cc
+    command = $cc $cflags -c $in -o $out
+    description = compling .cc
+rule link
+    command = $cc $in -o $out
+
+# build
+build foo.o: cc foo.cc
+build hello: link foo.o
+
+default hello
