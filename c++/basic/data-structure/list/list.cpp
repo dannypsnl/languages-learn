@@ -16,11 +16,19 @@ template <class T> Node<T> *Node<T>::get_next() { return next_node; }
 
 template <class T> List<T>::List(std::initializer_list<T> l) {
   auto iter = l.begin();
-  first = new Node<T>(*iter);
+  this->first = new Node<T>(*iter);
   auto now = first;
   for (iter = ++iter; iter != l.end(); ++iter) {
     now->next(new Node<T>(*iter));
     now = now->get_next();
+  }
+}
+
+template <class T> List<T>::~List() {
+  auto tmp = this->first;
+  while (tmp->get_next() != nullptr) {
+    tmp = tmp->get_next();
+    delete tmp;
   }
 }
 
