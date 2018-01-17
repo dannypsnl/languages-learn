@@ -32,6 +32,19 @@ template <class T> List<T>::~List() {
   }
 }
 
+template <class T> T List<T>::at(int index) {
+  int cursor = 0;
+  auto now = this->first;
+  while (now->get_next() != nullptr) {
+    if (index == cursor) {
+      return now->get_value();
+    }
+    now = now->get_next();
+    cursor++;
+  }
+  throw;
+}
+
 // TODO: accept functor at for_each
 template <class T> void List<T>::for_each() {
   for (auto now = first; now->get_next() != nullptr; now = now->get_next()) {

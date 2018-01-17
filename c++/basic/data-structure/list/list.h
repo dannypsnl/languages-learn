@@ -29,6 +29,7 @@ template <class T> class List {
 public:
   List(std::initializer_list<T>);
   ~List();
+  T at(int index);
   void for_each();
 };
 
