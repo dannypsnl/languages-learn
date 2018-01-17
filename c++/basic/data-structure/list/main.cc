@@ -10,4 +10,5 @@ int main() {
   std::cout << "l[0] = " << l.at(0) << std::endl;
   std::cout << "l[1] = " << l.at(1) << std::endl;
   std::cout << "l[2] = " << l.at(2) << std::endl;
+  std::cout << "l[3] = " << l[3] << std::endl;
 }
