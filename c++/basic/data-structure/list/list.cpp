@@ -1,3 +1,5 @@
+#include <stdexcept>
+
 namespace collec {
 
 namespace {
@@ -42,7 +44,7 @@ template <class T> T List<T>::at(int index) {
     now = now->get_next();
     cursor++;
   }
-  throw;
+  throw std::out_of_range("Out of range");
 }
 
 // TODO: accept functor at for_each
