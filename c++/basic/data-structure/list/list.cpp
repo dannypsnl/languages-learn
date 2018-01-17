@@ -4,6 +4,20 @@ namespace collec {
 
 namespace {
 
+template <class T> class Node {
+  T value;
+  // next_node default is nullptr
+  Node *next_node = nullptr;
+
+public:
+  // Just because compiler won't create one for you
+  Node();
+  Node(T);
+  void next(Node<T> *);
+  T get_value();
+  Node<T> *get_next();
+};
+
 template <class T> Node<T>::Node() {}
 
 template <class T> Node<T>::Node(T v) : value{v} {}
