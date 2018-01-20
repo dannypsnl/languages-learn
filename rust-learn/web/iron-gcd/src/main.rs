@@ -1,0 +1,30 @@
+extern crate iron;
+#[macro_use]
+extern crate mime;
+
+use iron::prelude::*;
+use iron::status;
+
+fn main() {
+    let serve = "localhost:3000";
+    println!("Serving on http://{}", serve);
+    Iron::new(get_form).http(serve).unwrap();
+}
+fn get_form(_request: &mut Request) -> IronResult<Response> {
+    let mut response = Response::new();
+
+    response.set_mut(status::Ok);
+    response.set_mut(mime!(Text/Html; Charset=Utf8));
+    response.set_mut(
+        r#"
+        <title>GCD Calculator</title>
+        <form action="/gcd" method="post">
+            <input type="text" name="n" />
+            <input type="text" name="m" />
+            <button type="submit">Compute GCD</button>
+        </form>
+        "#,
+    );
+
+    Ok(response)
+}
