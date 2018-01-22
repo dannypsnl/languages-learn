@@ -1,5 +1,7 @@
 module Main where
+-- binding Type
 x::Int
+-- binding value
 x = 2
 z::Int
 z = x + 1 -- z = 3
