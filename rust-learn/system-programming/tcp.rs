@@ -5,20 +5,21 @@ use std::io::Write;
 
 fn handle(stream: &mut TcpStream) {
     let now = SystemTime::now();
+    let mut response = String::new();
     match now.elapsed() {
-        Ok(elapsed) => {
-            stream.write_fmt(format_args!(
-                "Hello, I am Rust, now is {}",
-                elapsed.as_secs()
-            ));
-        }
-        Err(e) => {
-            stream.write_fmt(format_args!(
-                "Hello, can't read time, some error occurs, Error: {}",
-                e
-            ));
-        }
+        Ok(elapsed) => std::fmt::write(
+            &mut response,
+            format_args!("Hello, I am Rust, now is {}", elapsed.as_secs()),
+        ).expect("format fail"),
+        Err(e) => std::fmt::write(
+            &mut response,
+            format_args!("Hello, can't read time, some error occurs, Error: {}", e),
+        ).expect("format fail"),
     };
+    stream
+        .write(&response.into_bytes())
+        .expect("Write to connection fail");
+    stream.shutdown(Shutdown::Both).expect("Shutdown fail");
 }
 
 fn main() {
