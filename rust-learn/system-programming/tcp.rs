@@ -17,7 +17,7 @@ fn handle(stream: &mut TcpStream) {
         ).expect("format fail"),
     };
     stream
-        .write(&response.into_bytes())
+        .write(response.as_bytes())
         .expect("Write to connection fail");
     stream.shutdown(Shutdown::Both).expect("Shutdown fail");
 }
