@@ -46,11 +46,20 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ textarea [
-            placeholder "Text to reverse",
-            onInput Change,
-            rows 30,
-            cols 30
-          ] []
-        , div [] [ Markdown.toHtml [] model.content ]
+        [ div [
+            style [
+                ("float", "left")
+            ]
+        ] [
+            textarea [
+              placeholder "Text to reverse",
+              onInput Change,
+              rows 30,
+              cols 30
+            ] []
+        ], div [
+            style [
+                ("float", "left")
+            ]
+        ] [ Markdown.toHtml [] model.content ]
         ]
