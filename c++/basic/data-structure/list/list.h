@@ -24,4 +24,4 @@ public:
 
 } // namespace collec
 
-#include "./list.cpp"
+#include "./list.tlt"
