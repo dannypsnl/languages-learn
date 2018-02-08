@@ -1,0 +1,13 @@
+cflags = -std=c++14
+libs = -lopencv_core -lopencv_highgui -lopencv_imgcodecs
+cc = clang++
+dest = build
+
+rule cc
+    command = $cc $cflags -c $in -o $dest/$out
+
+rule link
+    command = $cc $dest/$in $libs -o $dest/$out
+
+build show_img.o: cc show_img.cpp
+build show_img: link show_img.o
