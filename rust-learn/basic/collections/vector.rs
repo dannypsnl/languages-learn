@@ -12,4 +12,7 @@ fn main() {
     for i in &v {
         println!("{}", i);
     }
+
+    // Point at here is type `Vec<i32>` is required, because compiler can't detect collect to what
+    println!("{:?}", v.iter().map(|&num| num * 2).collect::<Vec<i32>>());
 }
