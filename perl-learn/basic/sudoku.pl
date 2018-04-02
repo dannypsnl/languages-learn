@@ -9,11 +9,8 @@ sub chunks(Str $s, Int $chars) {
 }
 
 my $separator = '+---+---+---+';
-my $index = 0;
 for chunks($sudoku, 9) -> $line {
-    if $index++ %% 3 {
-        say $separator;
-    }
+    say $separator if $++ %% 3;
     say '|', chunks($line, 3).join('|'), '|';
 }
 say $separator;
