@@ -1,2 +1,2 @@
-#!/usr/bin/perl
-print "Hello, World. This is Perl!!!"
+use v6;
+say "Hello, World. This is Perl!!!"
