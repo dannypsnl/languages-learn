@@ -27,7 +27,11 @@ fn main() {
 
     for stream in ln.incoming() {
         match stream {
-            Ok(mut s) => handle(&mut s),
+            Ok(mut s) => {
+                std::thread::spawn(move || {
+                    handle(&mut s);
+                });
+            }
             Err(e) => println!("Some thing wrong, Error: {}", e),
         };
     }
