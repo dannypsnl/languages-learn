@@ -55,4 +55,4 @@ config :hello, Hello.Repo,
   password: "postgres",
   database: "hello_dev",
   hostname: "localhost",
-  pool_size: 10
+  pool_size: 1
