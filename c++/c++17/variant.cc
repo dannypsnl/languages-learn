@@ -1,8 +1,7 @@
 // compile: clang++ -std=c++17 -stdlib=libc++ variant.cc
 
-// This path is because I didn't setting my system
-#include <c++/v1/variant>
 #include <iostream>
+#include <variant>
 
 int main() {
   // As you can see, v can be int or char, this ability is really powerful
