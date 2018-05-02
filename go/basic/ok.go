@@ -1,8 +1,8 @@
 package main
 
 func main() {
-    i := 0
-    if val, ok := i.(int64); ok {
+    var i interface{} = 0
+    if val, ok := i.(int); ok {
         println(val)
     }
     m := map[string]string {
