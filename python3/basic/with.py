@@ -15,13 +15,15 @@ def ident():
     print('  ', end='')
 
 html = tag('html', True)
+body = tag('body', True)
 h1 = tag('h1', False)
 p = tag('p', False)
 
 with html:
-    ident()
-    with h1:
-        print('With!!!', end='')
-    ident()
-    with p:
-        print('Hello World', end='')
+    with body:
+        ident()
+        with h1:
+            print('With!!!', end='')
+        ident()
+        with p:
+            print('Hello World', end='')
