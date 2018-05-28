@@ -1,10 +1,10 @@
 quicksort :: Ord a => [a] -> [a]
 quicksort [] = []
-" x is frist element of xs
+-- x is frist element of xs
 quicksort (x: xs) = (quicksort lesser) ++ [x] ++ (quicksort greater)
   where
-  " filter a new list from xs, use lambda (< x), (>= x)
-  " at the end, combine quickSort lesser, x, quickSort greater
+  -- filter a new list from xs, use lambda (< x), (>= x)
+  -- at the end, combine quickSort lesser, x, quickSort greater
     lesser = filter (< x) xs
     greater = filter (>= x) xs
 
