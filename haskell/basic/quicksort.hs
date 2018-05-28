@@ -1,9 +1,12 @@
 quicksort :: Ord a => [a] -> [a]
 quicksort [] = []
-quicksort (p: xs) = (quicksort lesser) ++ [p] ++ (quicksort greater)
+" x is frist element of xs
+quicksort (x: xs) = (quicksort lesser) ++ [x] ++ (quicksort greater)
   where
-    lesser = filter (< p) xs
-    greater = filter (>= p) xs
+  " filter a new list from xs, use lambda (< x), (>= x)
+  " at the end, combine quickSort lesser, x, quickSort greater
+    lesser = filter (< x) xs
+    greater = filter (>= x) xs
 
 main :: IO()
 main = do 
