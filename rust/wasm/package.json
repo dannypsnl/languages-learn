@@ -4,17 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "webpack --progress",
+    "start": "http-server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "http-server": "^0.10.0",
     "rust-wasm-loader": "^0.1.2",
-    "webpack": "^3.10.0"
-  },
-  "scripts": {
-      "compile": "webpack --progress",
-      "start": "http-server"
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.3"
   }
 }
