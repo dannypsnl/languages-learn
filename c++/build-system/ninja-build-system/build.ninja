@@ -4,7 +4,7 @@ cflags = -Wall
 # rule
 rule cc
     command = $cc $cflags -c $in -o $out
-    description = compling .cc
+    description = compiling .cc
 rule link
     command = $cc $in -o $out
 
