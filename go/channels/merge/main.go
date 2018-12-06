@@ -17,14 +17,14 @@ func main() {
 	fmt.Println()
 }
 
-func merge(chans ...<-chan int) <-chan int {
-	out := make(chan int)
+func merge(chans ...<-chan interface{}) <-chan interface{} {
+	out := make(chan interface{})
 	go func() {
 
 		var wg sync.WaitGroup
 		wg.Add(len(chans))
 		for _, c := range chans {
-			go func(c <-chan int) {
+			go func(c <-chan interface{}) {
 				for v := range c {
 					out <- v
 				}
@@ -38,8 +38,8 @@ func merge(chans ...<-chan int) <-chan int {
 	return out
 }
 
-func asChan(vs ...int) <-chan int {
-	out := make(chan int)
+func asChan(vs ...interface{}) <-chan interface{} {
+	out := make(chan interface{})
 	go func() {
 		defer close(out)
 		for _, v := range vs {
