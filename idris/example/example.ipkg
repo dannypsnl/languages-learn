@@ -1,0 +1,6 @@
+package example
+
+sourcedir = src
+
+main = Main
+executable = example
