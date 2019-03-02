@@ -7,12 +7,12 @@ void setup() {
 }
 
 void loop() {
-  for (int i=0; i <= 90; i++) {
-    my_servo.write(i);
+  for (int i = 0; i <= 90; i++) {
+    my_servo.write(i * 2);
     delay(20);
   }
-  for (int i=90; i>=0; i--) {
-    my_servo.write(i);
+  for (int i = 90; i >= 0; i--) {
+    my_servo.write(i * 2);
     delay(20);
   }
 }
