@@ -1,16 +1,14 @@
-package hashmap_test
+package hashmap
 
 import (
 	"fmt"
 	"testing"
 
-	"github.com/dannypsnl/hashmap"
-
 	"github.com/stretchr/testify/require"
 )
 
 func TestHashMap(t *testing.T) {
-	m := hashmap.New()
+	m := New()
 
 	testCases := []struct {
 		key   string

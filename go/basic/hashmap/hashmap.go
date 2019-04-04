@@ -27,9 +27,6 @@ func New() *HashMap {
 
 func (h *HashMap) getIndex(k string) int {
 	v := int(JenkinsHash(k))
-	if v < 0 {
-		v = -v
-	}
 	return v % h.size
 }
 
@@ -60,10 +57,10 @@ func (h *HashMap) Get(k string) interface{} {
 	return nil
 }
 
-func JenkinsHash(key string) uint {
-	var h uint
+func JenkinsHash(key string) uint32 {
+	var h uint32
 	for _, c := range key {
-		h += uint(c)
+		h += uint32(c)
 		h += (h << 10)
 		h ^= (h >> 6)
 	}
