@@ -1,5 +1,6 @@
 elm-stuff/
 
+.ccls-cache
 **/*/*.o
 **/*/*.hi
 **/*/nimcache
