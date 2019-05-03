@@ -1,6 +1,9 @@
+dependencies = { }
+
 [package]
 name = "rust-wasm"
 version = "0.1.0"
-authors = ["dannypsnl <dannypsnl@gmail.com>"]
+authors = [ "dannypsnl <dannypsnl@gmail.com>" ]
 
-[dependencies]
+[lib]
+crate-type = [ "cdylib" ]
