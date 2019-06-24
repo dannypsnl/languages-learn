@@ -1,0 +1,24 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{color}
+
+\begin{document}
+
+\title{Learning LaTeX}
+\author{dannypsnl}
+\date{2019}
+\maketitle
+
+\begin{abstract}
+Abstract here
+\end{abstract}
+
+\section{Structure}
+This section's content...
+\subsection{Top Matter}
+This subsection's content...
+\subsubsection{Article Information}
+This subsubsection's content...
+\subsubsection{Article Information}
+This subsubsection's content...
+
+\end{document}
