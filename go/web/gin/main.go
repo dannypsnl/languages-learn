@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/contrib/sessions"
+	"github.com/gin-gonic/gin"
 
-	"github.com/dannypsnl/gin-start/route"
+	"languages-learn/go/web/gin/route"
 )
 
 func main() {
