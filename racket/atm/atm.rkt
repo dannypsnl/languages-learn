@@ -21,7 +21,7 @@
         [(equal? (car left) 'withdraw) (- right (cdr left))]
         [(equal? (car left) 'deposit) (+ right (cdr left))]
         ; 遇到不在意的 transaction 我們就跳過
-        [#t right]
+        [else right]
       ))
     ]
   )
